@@ -1,0 +1,49 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    
+    <div class="area">
+    <nav class="main-menu">
+            
+        <ul>
+            <!-- <li>
+                <a href="http://justinfarrow.com">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">
+                        Dashboard
+                    </span>
+                </a>
+
+            </li> -->
+            <p>Categories</p>
+            <li *ngFor="let category of categorylist | async">
+                <a (click)="navigatelistpage(category.name)">
+                    <i  class="fa fa-square fa-2x" aria-hidden="true"></i>
+                    <span class="nav-text">
+                        {{category.name}}
+                    </span>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="logout">
+            <li>
+                <a href="#/about/home">
+                    <i class="fa fa-power-off fa-2x"></i>
+                    <span class="nav-text">
+                        Logout
+                    </span>
+                </a>
+            </li>
+        </ul>
+    
+    </nav>
+ </div> 
+</body>
+
+</html>
+

@@ -1,0 +1,28 @@
+	
+<body>
+	<div class="stl">
+	  <div class="login"><br><br><br><br><br><br><br><br>
+		
+  
+		<h2 class="login-header">Log in</h2>
+  
+		<form class="login-container" [formGroup]="loginForm" (ngSubmit)="login()">
+		  <!-- <p><input type="email" placeholder="Email"></p> -->
+		  <input placeholder="username" class="form-control" type="text" formControlName="username">
+		  <!-- error -->
+		  <div class="validation-error" *ngIf="submitted && myForm.fname.errors?.required">
+			Name is required.
+		  </div>
+		  <!-- <p><input type="password" placeholder="Password"></p> -->
+		  <input placeholder="password" class="form-control" type="password" formControlName="password">
+		  <!-- error -->
+		  <div class="validation-error" *ngIf="submitted && myForm.fname.errors?.required">
+			Name is required.
+		  </div>
+		  <p><input type="submit" value="Log in"></p>
+		 <a [routerLink]="['/auth/register']">Don't have an account? Signup here</a>
+		</form>
+		
+	  </div>
+	</div>
+  </body>
